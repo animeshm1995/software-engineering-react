@@ -18,7 +18,7 @@ export const findUserById = (uid) =>
         .then(response => response.data);
 
 export const deleteUser = (uid) =>
-  axios.delete(`${USERS_API}/${uid}/delete`)
+  axios.delete(`${USERS_API}/${uid}`)
     .then(response => response.data);
 
 export const deleteUsersByUsername = (username) =>
