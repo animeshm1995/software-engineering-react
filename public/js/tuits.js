@@ -57,6 +57,10 @@ function Tuits() {
            ${tuit.stats.likes}
           </div>
           <div class="col">
+           <i class="far fa-heart"></i>
+           ${tuit.stats.dislikes}
+          </div>
+          <div class="col">
            <i class="far fa-inbox-out"></i>
           </div>
          </div>
