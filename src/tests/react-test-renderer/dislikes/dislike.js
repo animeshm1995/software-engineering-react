@@ -1,7 +1,8 @@
 const Dislike = ({dislike}) => {
     return(
         <li className="ttr-dislike">
-            {dislike.dislikes}
+            {dislike.tuit}
+            {dislike.dislikedBy}
         </li>
     )
 }
