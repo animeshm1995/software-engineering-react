@@ -4,7 +4,7 @@ const Dislikes = ({dislikes = []}) => {
     return (
         <div>
             {
-                dislikes.map(tuit =>
+                dislikes.map(dislikes =>
                     <Dislikes
                         key={dislikes._id}
                         tuit={dislikes.tuit}
