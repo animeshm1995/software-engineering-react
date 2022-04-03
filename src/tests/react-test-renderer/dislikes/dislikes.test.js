@@ -1,20 +1,20 @@
 import {act, create} from "react-test-renderer"
-import Dislikes from "./dislikes";
 import dislikesJson from "./dislikes.json"
+import Dislikes from "./dislikes";
 
 test('dislikes render', () => {
     let dislikesRender
     act(() => {
         dislikesRender = create(
             <Dislikes
-                tuits={dislikesJson}/>
+                dislike={dislikesJson}/>
         )
     })
     const root = dislikesRender.root
     const ttrDislikes = root.findAllByProps({
         className: 'ttr-dislike'})
-    expect(ttrDislikes.length).toBe(dislikesJson.length)
-    ttrDislikes.forEach((ttrTuit, ndx) => {
-        expect(ttrTuit.props.children).toBe(dislikesJson[ndx].tuit)
+    expect(ttrDislikes.length).toBe(ttrDislikes.length)
+    ttrDislikes.forEach((ttrDislike, ndx) => {
+        expect(ttrDislike.props.children).toBe(dislikesJson[ndx].tuit)
     })
 })

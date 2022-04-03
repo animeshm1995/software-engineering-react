@@ -1,14 +1,14 @@
-
+import Dislike from "./dislike";
 
 const Dislikes = ({dislikes = []}) => {
     return (
         <div>
             {
-                dislikes.map(dislikes =>
-                    <Dislikes
-                        key={dislikes._id}
-                        tuit={dislikes.tuit}
-                        dislikedBy={dislikes.dislikedBy}
+                dislikes.map(dislike =>
+                    <Dislike
+                        key={dislike._id}
+                        tuit={dislike.tuit}
+                        dislikedBy={dislike.dislikedBy}
                     />
                 )
             }
